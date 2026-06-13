@@ -53,7 +53,7 @@
   .hero-desc{font-size:0.95rem;color:var(--text-muted);max-width:520px;margin:1.5rem 0 2.5rem;line-height:1.9;font-family:sans-serif}
   .hero-cta{display:inline-flex;align-items:center;gap:0.6rem;padding:0.9rem 2.2rem;border:1px solid var(--gold);color:var(--gold);text-decoration:none;font-size:0.78rem;letter-spacing:2.5px;text-transform:uppercase;transition:all 0.3s;font-family:sans-serif}
   .hero-cta:hover{background:var(--gold);color:var(--dark)}
-  .hero-links{display:flex;gap:1.5rem;margin-top:2rem}
+  .hero-links{display:flex;gap:1.5rem;margin-top:2rem;flex-wrap:wrap}
   .hero-link{color:var(--text-muted);text-decoration:none;font-size:0.78rem;letter-spacing:1.5px;text-transform:uppercase;font-family:sans-serif;border-bottom:1px solid transparent;transition:all 0.3s}
   .hero-link:hover{color:var(--gold);border-bottom-color:var(--gold)}
   .hero-badge{display:inline-block;padding:0.3rem 0.9rem;border:1px solid var(--border);font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);font-family:sans-serif;margin-bottom:1.2rem}
@@ -92,11 +92,24 @@
   .exp-item{display:grid;grid-template-columns:180px 1fr;gap:2rem;padding:2.5rem 0;border-bottom:1px solid var(--border)}
   .exp-item:last-child{border-bottom:none}
   .exp-date{font-size:0.75rem;letter-spacing:1.5px;color:var(--gold);font-family:sans-serif;padding-top:0.2rem}
+  .exp-badge{display:inline-block;margin-top:0.5rem;padding:0.2rem 0.6rem;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;border:1px solid rgba(201,169,110,0.4);color:var(--gold);font-family:sans-serif}
   .exp-role{font-size:1.1rem;color:var(--text);margin-bottom:0.3rem}
   .exp-company{font-size:0.85rem;color:var(--gold);margin-bottom:1rem;font-family:sans-serif}
   .exp-desc{font-size:0.88rem;color:var(--text-muted);font-family:sans-serif;line-height:1.8}
   .exp-desc li{margin-bottom:0.4rem;list-style:none;padding-left:1.2rem;position:relative}
   .exp-desc li::before{content:'—';position:absolute;left:0;color:var(--gold)}
+
+  /* INDUSTRY PROJECT */
+  #industry{border-top:1px solid var(--border)}
+  .industry-card{border:1px solid var(--border);padding:2.5rem;position:relative;transition:border-color 0.3s;overflow:hidden}
+  .industry-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
+  .industry-card:hover{border-color:rgba(201,169,110,0.5);background:rgba(201,169,110,0.02)}
+  .industry-label{font-size:0.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;font-family:sans-serif}
+  .industry-title{font-size:1.2rem;color:var(--text);margin-bottom:0.4rem}
+  .industry-org{font-size:0.85rem;color:var(--gold);font-family:sans-serif;margin-bottom:1.2rem}
+  .industry-desc{font-size:0.88rem;color:var(--text-muted);font-family:sans-serif;line-height:1.8}
+  .industry-desc li{margin-bottom:0.4rem;list-style:none;padding-left:1.2rem;position:relative}
+  .industry-desc li::before{content:'—';position:absolute;left:0;color:var(--gold)}
 
   /* PROJECTS */
   #projects{border-top:1px solid var(--border)}
@@ -110,6 +123,14 @@
   .project-desc{font-size:0.85rem;color:var(--text-muted);font-family:sans-serif;line-height:1.8;margin-bottom:1.2rem}
   .project-stack{display:flex;flex-wrap:wrap;gap:0.4rem}
   .stack-tag{padding:0.2rem 0.6rem;background:rgba(201,169,110,0.08);border:1px solid rgba(201,169,110,0.2);font-size:0.7rem;color:var(--gold);font-family:sans-serif}
+
+  /* ACHIEVEMENTS */
+  #achievements{border-top:1px solid var(--border)}
+  .achievement-item{padding:1.8rem;border:1px solid var(--border);margin-bottom:1rem;display:flex;gap:1.5rem;align-items:flex-start;transition:all 0.3s}
+  .achievement-item:hover{border-color:var(--gold);background:rgba(201,169,110,0.02)}
+  .achievement-icon{width:40px;height:40px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;color:var(--gold)}
+  .achievement-title{font-size:0.92rem;color:var(--text);font-family:sans-serif;margin-bottom:0.3rem;font-weight:600}
+  .achievement-desc{font-size:0.82rem;color:var(--text-muted);font-family:sans-serif;line-height:1.7}
 
   /* CERTIFICATIONS */
   #certifications{border-top:1px solid var(--border)}
@@ -163,7 +184,9 @@
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#industry">Industry</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
       <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -178,7 +201,9 @@
   <a href="#education" onclick="closeMenu()">Education</a>
   <a href="#skills" onclick="closeMenu()">Skills</a>
   <a href="#experience" onclick="closeMenu()">Experience</a>
+  <a href="#industry" onclick="closeMenu()">Industry Project</a>
   <a href="#projects" onclick="closeMenu()">Projects</a>
+  <a href="#achievements" onclick="closeMenu()">Achievements</a>
   <a href="#certifications" onclick="closeMenu()">Certifications</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
 </div>
@@ -190,12 +215,13 @@
     <div class="hero-eyebrow">Portfolio — 2026</div>
     <div class="hero-badge">Available for opportunities</div>
     <h1 class="hero-name">John Santhosh<br><span>Daniel J</span></h1>
-    <p class="hero-sub">Software Developer & AI Enthusiast</p>
-    <p class="hero-desc">Aspiring software professional with a strong foundation in computer science, full-stack development, and AI/ML. Building meaningful systems that blend intelligence with elegant code.</p>
+    <p class="hero-sub">Machine Learning Engineer & Full-Stack Developer</p>
+    <p class="hero-desc">Final-year B.E. CSE student (CGPA: 8.130) with hands-on experience in Machine Learning, AI, and Full-Stack Development. Currently interning at Gradtwin as an ML Intern. Building intelligent systems that blend data science with elegant code.</p>
     <a href="#contact" class="hero-cta">Get in touch ↗</a>
     <div class="hero-links">
-      <a href="https://www.linkedin.com/in/john-daniel-990501251/" class="hero-link">LinkedIn</a>
-      <a href="https://github.com/johx01" class="hero-link">GitHub</a>
+      <a href="https://www.linkedin.com/in/john-daniel-990501251/" class="hero-link" target="_blank">LinkedIn</a>
+      <a href="https://github.com/johx01" class="hero-link" target="_blank">GitHub</a>
+      <a href="https://leetcode.com/u/johnsanthosh06/" class="hero-link" target="_blank">LeetCode</a>
       <a href="mailto:johnsanthosh06@gmail.com" class="hero-link">Email</a>
     </div>
   </div>
@@ -208,18 +234,19 @@
   <div class="gold-line"></div>
   <div class="about-grid">
     <div class="about-text">
-      <p>I'm John Santhosh Daniel J, a final-year Computer Science Engineering student at VISTAS, Chennai. My journey in tech is driven by curiosity — from building AI-powered chatbots to deep learning models for medical imaging.</p>
-      <p>I bring together front-end craft, backend logic, and machine intelligence to build products that are both functional and forward-thinking. I've gained real-world experience as a Full Stack Intern and presented research at an international conference.</p>
-      <p>When I'm not coding, I'm solving problems on LeetCode, exploring new frameworks, and sharpening my instinct for clean, purposeful design.</p>
+      <p>I'm John Santhosh Daniel J, a recent Computer Science Engineering graduate at VISTAS, Chennai (CGPA: 8.130). My journey in tech is driven by curiosity — from building AI-powered chatbots to CNN-based deep learning models for medical imaging.</p>
+      <p>I bring together front-end craft, backend logic, web applications and AI/machine intelligence to build products that are both functional and forward-thinking. I'm currently completing a Machine Learning Internship at Gradtwin, have delivered a 90-hour industry AI project under TCS iON, and have presented research papers at national and international conferences.</p>
+      <p>When I'm not building models or writing code, I'm solving problems on LeetCode, exploring new ML frameworks, and sharpening my instinct for clean, purposeful design.</p>
     </div>
     <div>
       <table class="info-table">
-        <tr><td>Date of birth</td><td>06 January 2005</td></tr>
+        <tr><td>Date of Birth</td><td>06 January 2005</td></tr>
         <tr><td>Nationality</td><td>Indian</td></tr>
-        <tr><td>Location</td><td>Chennai, Tamil Nadu</td></tr>
+        <tr><td>Location</td><td>Chennai – 600082, Tamil Nadu</td></tr>
         <tr><td>Languages</td><td>Tamil, English</td></tr>
         <tr><td>Email</td><td>johnsanthosh06@gmail.com</td></tr>
         <tr><td>Phone</td><td>+91 9176597737</td></tr>
+        <tr><td>CGPA</td><td>8.130 / 10.0</td></tr>
         <tr><td>Status</td><td>Open to opportunities</td></tr>
       </table>
     </div>
@@ -235,7 +262,7 @@
     <div class="edu-year">Aug 2022 — May 2026</div>
     <div class="edu-school">Vels Institute of Science, Technology & Advanced Studies (VISTAS)</div>
     <div class="edu-degree">B.E. Computer Science Engineering · Chennai</div>
-    <div class="edu-grade">CGPA — 8.0</div>
+    <div class="edu-grade">CGPA — 8.130 / 10.0</div>
   </div>
   <div class="edu-item">
     <div class="edu-year">Class XII · 2022</div>
@@ -260,27 +287,30 @@
     <div class="skill-card">
       <div class="skill-cat">Programming Languages</div>
       <div class="skill-tags">
-        <span class="skill-tag">Java</span>
         <span class="skill-tag">Python</span>
+        <span class="skill-tag">Java</span>
         <span class="skill-tag">C</span>
       </div>
     </div>
     <div class="skill-card">
-      <div class="skill-cat">Frontend</div>
-      <div class="skill-tags">
-        <span class="skill-tag">HTML</span>
-        <span class="skill-tag">CSS</span>
-        <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">React</span>
-      </div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-cat">AI / ML</div>
+      <div class="skill-cat">Machine Learning & AI</div>
       <div class="skill-tags">
         <span class="skill-tag">TensorFlow</span>
         <span class="skill-tag">Keras</span>
         <span class="skill-tag">OpenCV</span>
         <span class="skill-tag">CNN</span>
+        <span class="skill-tag">Deep Learning</span>
+        <span class="skill-tag">NLP</span>
+        <span class="skill-tag">Scikit-learn</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">Web Technologies</div>
+      <div class="skill-tags">
+        <span class="skill-tag">HTML</span>
+        <span class="skill-tag">CSS</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">React.js</span>
       </div>
     </div>
     <div class="skill-card">
@@ -291,11 +321,11 @@
       </div>
     </div>
     <div class="skill-card">
-      <div class="skill-cat">Tools & Platforms</div>
+      <div class="skill-cat">Cloud & Tools</div>
       <div class="skill-tags">
-        <span class="skill-tag">VS Code</span>
+        <span class="skill-tag">AWS</span>
         <span class="skill-tag">Git</span>
-        <span class="skill-tag">AWS Cloud</span>
+        <span class="skill-tag">VS Code</span>
       </div>
     </div>
     <div class="skill-card">
@@ -305,6 +335,7 @@
         <span class="skill-tag">Communication</span>
         <span class="skill-tag">Critical Thinking</span>
         <span class="skill-tag">Adaptability</span>
+        <span class="skill-tag">Problem-Solving</span>
       </div>
     </div>
   </div>
@@ -315,51 +346,80 @@
   <div class="section-label">04 — Work experience</div>
   <h2 class="section-title">Experience</h2>
   <div class="gold-line"></div>
+
+  <!-- Gradtwin -->
   <div class="exp-item">
-    <div class="exp-date">Jan 2025 — Feb 2025</div>
+    <div>
+      <div class="exp-date">Jun 2026 — Present</div>
+      <div class="exp-badge">Current</div>
+    </div>
+    <div>
+      <div class="exp-role">Machine Learning Intern</div>
+      <div class="exp-company">Gradtwin · Remote</div>
+      <ul class="exp-desc">
+        <li>Designing and developing a machine learning model as part of a structured 3-month applied ML internship program.</li>
+        <li>Gaining hands-on experience in data preprocessing, feature engineering, model training, evaluation, and optimization using Python, TensorFlow, and Scikit-learn.</li>
+        <li>Applying supervised and unsupervised learning algorithms to real-world datasets and business problem statements.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Eagle Hitech -->
+  <div class="exp-item">
+    <div>
+      <div class="exp-date">Jan 2025 — Feb 2025</div>
+    </div>
     <div>
       <div class="exp-role">Full Stack Intern</div>
       <div class="exp-company">Eagle Hitech Soft Cloud Pvt. Ltd. · Chennai</div>
       <ul class="exp-desc">
-        <li>Developed responsive front-end components using HTML, CSS, and JavaScript to enhance user interface and website performance.</li>
-        <li>Participated in Agile sprints, completing assigned tasks on time while assisting in debugging and UI improvements.</li>
+        <li>Built responsive front-end components using HTML, CSS, and JavaScript, improving UI performance and user experience.</li>
+        <li>Participated in Agile sprints, delivered assigned tasks within deadlines, and contributed to debugging and UI enhancements.</li>
+        <li>Collaborated with cross-functional teams to implement new features and resolve production issues.</li>
       </ul>
     </div>
   </div>
 </section>
 
+<!-- INDUSTRY PROJECT -->
+<section id="industry">
+  <div class="section-label">05 — Industry project</div>
+  <h2 class="section-title">TCS iON AIP</h2>
+  <div class="gold-line"></div>
+  <div class="industry-card">
+    <div class="industry-label">TCS iON Applied Industry Projects · Apr 2026 – May 2026 · 90 Hours</div>
+    <div class="industry-title">AI-Driven Policy & Compliance Intelligence System</div>
+    <div class="industry-org">Tata Consultancy Services (TCS iON)</div>
+    <ul class="industry-desc">
+      <li>Completed a 90-hour industry-level project under Tata Consultancy Services (TCS iON).</li>
+      <li>Developed an AI-powered compliance intelligence system leveraging NLP for automated policy document analysis and compliance verification.</li>
+      <li>Gained enterprise-level experience in AI automation solutions, workflow design, and regulatory compliance systems.</li>
+    </ul>
+  </div>
+</section>
+
 <!-- PROJECTS -->
 <section id="projects">
-  <div class="section-label">05 — Selected work</div>
+  <div class="section-label">06 — Selected work</div>
   <h2 class="section-title">Projects</h2>
   <div class="gold-line"></div>
   <div class="projects-grid">
     <div class="project-card">
       <div class="project-num">Project 01</div>
-      <div class="project-title">JohnBot — AI-Powered Conversational Chatbot</div>
-      <div class="project-desc">An intelligent chatbot that engages users in real-time AI-driven conversations with dynamic backend integration for contextual responses.</div>
-      <div class="project-stack">
-        <span class="stack-tag">HTML</span>
-        <span class="stack-tag">CSS</span>
-        <span class="stack-tag">JavaScript</span>
-        <span class="stack-tag">AI Integration</span>
-      </div>
-    </div>
-    <div class="project-card">
-      <div class="project-num">Project 02</div>
-      <div class="project-title">Brain Tumor Detection — Deep Learning</div>
-      <div class="project-desc">A CNN-based model to detect and classify brain tumors from MRI images achieving 92–95% accuracy for efficient medical image analysis.</div>
+      <div class="project-title">Brain Tumor Detection Using Deep Learning</div>
+      <div class="project-desc">Designed and trained a CNN-based deep learning model to detect and classify brain tumors from MRI scan images. Achieved 92–95% classification accuracy with efficient image preprocessing pipelines for medical image analysis at scale.</div>
       <div class="project-stack">
         <span class="stack-tag">Python</span>
         <span class="stack-tag">TensorFlow</span>
         <span class="stack-tag">Keras</span>
         <span class="stack-tag">OpenCV</span>
+        <span class="stack-tag">CNN</span>
       </div>
     </div>
     <div class="project-card">
-      <div class="project-num">Project 03</div>
+      <div class="project-num">Project 02</div>
       <div class="project-title">AI + IoT Smart Flood Prediction System</div>
-      <div class="project-desc">A smart disaster management system combining IoT sensors and AI analytics to monitor water levels and predict flood risks with early warning alerts.</div>
+      <div class="project-desc">Built an end-to-end smart disaster management system combining IoT sensor data with AI-based prediction models. Deployed real-time water level monitoring with automated early warning alerts. Research paper presented at NCICT '26, Dr. M.G.R. University.</div>
       <div class="project-stack">
         <span class="stack-tag">Python</span>
         <span class="stack-tag">IoT</span>
@@ -367,12 +427,71 @@
         <span class="stack-tag">Sensors</span>
       </div>
     </div>
+    <div class="project-card">
+      <div class="project-num">Project 03</div>
+      <div class="project-title">JohnBot — AI-Powered Conversational Chatbot</div>
+      <div class="project-desc">Developed a full-stack AI chatbot with backend integration for real-time dynamic responses and context-aware conversation flows. Designed a seamless UI enabling natural language interaction.</div>
+      <div class="project-stack">
+        <span class="stack-tag">HTML</span>
+        <span class="stack-tag">CSS</span>
+        <span class="stack-tag">JavaScript</span>
+        <span class="stack-tag">NLP</span>
+        <span class="stack-tag">AI Integration</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="section-label">07 — Recognition</div>
+  <h2 class="section-title">Achievements</h2>
+  <div class="gold-line"></div>
+
+  <div class="achievement-item">
+    <div class="achievement-icon">🏆</div>
+    <div>
+      <div class="achievement-title">TCS iON NQT – Cognitive Assessment (84.77%)</div>
+      <div class="achievement-desc">Scored 1525.94 / 1800 — Numerical Ability: 600/600 (Perfect Score), Verbal Ability: 459.60/600, Reasoning Ability: 466.34/600. May 2026 · Reg. No: 22071663338.</div>
+    </div>
+  </div>
+
+  <div class="achievement-item">
+    <div class="achievement-icon">🗣</div>
+    <div>
+      <div class="achievement-title">TCS iON English Communication Test – CEFR B2 (Advanced)</div>
+      <div class="achievement-desc">Achieved B2 Advanced level in Writing, Speaking & Listening — issued by TCS iON, Tata Consultancy Services. Issue Date: Jun 2026 · Valid till Jun 2028.</div>
+    </div>
+  </div>
+
+  <div class="achievement-item">
+    <div class="achievement-icon">🏭</div>
+    <div>
+      <div class="achievement-title">TCS iON Industry Project Completion – AI-Driven Policy & Compliance Intelligence System</div>
+      <div class="achievement-desc">Successfully completed a 90-hour industry project with TCS iON (Tata Consultancy Services), May 2026.</div>
+    </div>
+  </div>
+
+  <div class="achievement-item">
+    <div class="achievement-icon">📜</div>
+    <div>
+      <div class="achievement-title">Research Paper – NCICT '26 National Conference</div>
+      <div class="achievement-desc">Presented 'AI and IoT Based Smart Flood Prediction System' at the 11th National Conference on Innovative Computing Techniques (NCICT '26 – QUANT), Dr. M.G.R. University, Chennai — April 2026.</div>
+    </div>
+  </div>
+
+  <div class="achievement-item">
+    <div class="achievement-icon">📜</div>
+    <div>
+      <div class="achievement-title">Research Paper – ICGTETA '25 International Conference</div>
+      <div class="achievement-desc">Presented research paper at the ICGTETA '25 International Conference — 2025.</div>
+    </div>
   </div>
 </section>
 
 <!-- CERTIFICATIONS -->
 <section id="certifications">
-  <div class="section-label">06 — Credentials</div>
+  <div class="section-label">08 — Credentials</div>
   <h2 class="section-title">Certifications</h2>
   <div class="gold-line"></div>
   <div class="cert-grid">
@@ -384,6 +503,13 @@
       </div>
     </div>
     <div class="cert-item">
+      <div class="cert-icon">🧠</div>
+      <div>
+        <div class="cert-name">Fundamentals of Deep Learning</div>
+        <div class="cert-org">NVIDIA</div>
+      </div>
+    </div>
+    <div class="cert-item">
       <div class="cert-icon">🎨</div>
       <div>
         <div class="cert-name">Computer Graphics and Multimedia</div>
@@ -391,24 +517,10 @@
       </div>
     </div>
     <div class="cert-item">
-      <div class="cert-icon">🔷</div>
-      <div>
-        <div class="cert-name">Learn Programming with JavaScript</div>
-        <div class="cert-org">IBM Skills Build</div>
-      </div>
-    </div>
-    <div class="cert-item">
       <div class="cert-icon">☁</div>
       <div>
-        <div class="cert-name">AWS Cloud Fundamentals</div>
+        <div class="cert-name">AWS Cloud Foundations</div>
         <div class="cert-org">VISTAS</div>
-      </div>
-    </div>
-    <div class="cert-item">
-      <div class="cert-icon">📄</div>
-      <div>
-        <div class="cert-name">ICGTETA'25 Conference</div>
-        <div class="cert-org">Research Paper Presenter · 2 Papers</div>
       </div>
     </div>
   </div>
@@ -416,12 +528,12 @@
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-label">07 — Let's connect</div>
+  <div class="section-label">09 — Let's connect</div>
   <h2 class="section-title">Contact</h2>
   <div class="gold-line"></div>
   <div class="contact-grid">
     <div>
-      <p class="contact-intro">I'm currently open to full-time roles, internships, and exciting collaborations. Whether you have a project in mind or just want to connect — I'd love to hear from you.</p>
+      <p class="contact-intro">I'm currently open to full-time roles, internships, and exciting collaborations in ML, AI, or full-stack development. Whether you have a project in mind or just want to connect — I'd love to hear from you.</p>
       <div class="contact-item">
         <div>
           <div class="contact-label">Email</div>
@@ -437,14 +549,15 @@
       <div class="contact-item">
         <div>
           <div class="contact-label">Location</div>
-          <div class="contact-val">Chennai, Tamil Nadu, India</div>
+          <div class="contact-val">Chennai – 600082, Tamil Nadu, India</div>
         </div>
       </div>
     </div>
     <div>
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/john-daniel-990501251/" class="social-link"><span>in</span> LinkedIn</a>
-        <a href="https://github.com/johx01" class="social-link"><span>gh</span> GitHub</a>
+        <a href="https://www.linkedin.com/in/john-daniel-990501251/" class="social-link" target="_blank"><span>in</span> LinkedIn</a>
+        <a href="https://github.com/johx01" class="social-link" target="_blank"><span>gh</span> GitHub</a>
+        <a href="https://leetcode.com/u/johnsanthosh06/" class="social-link" target="_blank"><span>lc</span> LeetCode</a>
         <a href="mailto:johnsanthosh06@gmail.com" class="social-link"><span>@</span> Email me</a>
       </div>
     </div>
@@ -452,7 +565,7 @@
 </section>
 
 <footer>
-  <p>© 2025 John Santhosh Daniel J &nbsp;·&nbsp; Crafted with precision</p>
+  <p>© 2026 John Santhosh Daniel J &nbsp;·&nbsp; Crafted with precision</p>
 </footer>
 
 <script>
